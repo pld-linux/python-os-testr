@@ -1,0 +1,11 @@
+based on https://opendev.org/openstack/os-testr/commit/a4876f6d6daf53fe0438f6151b697957ae2024d7
+--- os-testr-1.1.0/os_testr/subunit_trace.py.orig	2019-07-10 23:44:00.000000000 +0200
++++ os-testr-1.1.0/os_testr/subunit_trace.py	2024-02-23 22:01:25.148008525 +0100
+@@ -29,6 +29,7 @@ import sys
+ import pbr.version
+ import subunit
+ import testtools
++from subunit import test_results
+ 
+ from os_testr.utils import colorizer
+ 

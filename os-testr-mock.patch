@@ -1,0 +1,56 @@
+--- os-testr-1.1.0/os_testr/tests/test_ostestr.py.orig	2019-07-10 23:44:00.000000000 +0200
++++ os-testr-1.1.0/os_testr/tests/test_ostestr.py	2024-02-23 21:45:26.523201842 +0100
+@@ -19,7 +19,10 @@ test_os_testr
+ Tests for `os_testr` module.
+ """
+ import io
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ 
+ from os_testr import ostestr as os_testr
+ from os_testr.tests import base
+--- os-testr-1.1.0/os_testr/tests/test_regex_builder.py.orig	2019-07-10 23:44:00.000000000 +0200
++++ os-testr-1.1.0/os_testr/tests/test_regex_builder.py	2024-02-23 21:45:52.239729190 +0100
+@@ -13,7 +13,10 @@
+ # under the License.
+ 
+ import io
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ 
+ from os_testr import regex_builder as os_testr
+ from os_testr.tests import base
+--- os-testr-1.1.0/os_testr/tests/test_subunit_trace.py.orig	2019-07-10 23:44:00.000000000 +0200
++++ os-testr-1.1.0/os_testr/tests/test_subunit_trace.py	2024-02-23 21:46:24.329555344 +0100
+@@ -22,7 +22,10 @@ import sys
+ from ddt import data
+ from ddt import ddt
+ from ddt import unpack
+-from mock import patch
++try:
++    from unittest.mock import patch
++except ImportError:
++    from mock import patch
+ import six
+ 
+ from os_testr import subunit_trace
+--- os-testr-1.1.0/os_testr/tests/testlist_builder.py.orig	2019-07-10 23:44:00.000000000 +0200
++++ os-testr-1.1.0/os_testr/tests/testlist_builder.py	2024-02-23 21:46:45.092776194 +0100
+@@ -12,7 +12,10 @@
+ # License for the specific language governing permissions and limitations
+ # under the License.
+ 
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import re
+ 
+ import six
