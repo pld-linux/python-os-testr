@@ -90,8 +90,8 @@ Dokumentacja API modułu Pythona os-testr.
 
 %prep
 %setup -q -n os-testr-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P 0 -p1
+%patch -P 1 -p1
 
 %build
 %if %{with python2}
