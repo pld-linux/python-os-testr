@@ -10,7 +10,7 @@ Summary(pl.UTF-8):	Obudowanie testr dostarczające funkcjonalność dla projekt�
 Name:		python-os-testr
 # keep 1.x here for python2 support
 Version:	1.1.0
-Release:	2
+Release:	3
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/os-testr/
